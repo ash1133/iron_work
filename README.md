@@ -1,0 +1,1 @@
+<a href="https://www.figma.com/file/BoJAtvavXX67e4oVmjmWKv/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B5-%D0%B4%D0%B5%D0%BB%D0%BE?type=design&node-id=100%3A1487&mode=design&t=1hBAywOafTLHQ8S8-1">figma</a>
