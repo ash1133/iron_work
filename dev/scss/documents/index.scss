@@ -1,0 +1,82 @@
+.b-documents__title{
+  text-align: center;
+
+  @include H3;
+  @media (min-width:768px) {
+    @include H2;
+    font-weight: 700;
+  }
+}
+.b-documents__title__nav{
+  display: none;
+  @media (min-width:1200px){
+    display: block;
+  }
+
+  svg + svg{
+    margin-left: 32px;
+  }
+
+  svg{
+    cursor: pointer;
+    &.disabled{
+      cursor: auto;
+      opacity: .5;
+    }
+
+    * {
+      transition: stroke linear .2s, fill linear .2s;
+    }
+
+    &:hover, &:focus{
+      path:first-child{
+        fill: $primary;
+      }
+      path:last-child {
+        stroke: $black;
+      }
+    }
+  }
+}
+
+[data-slider="OwlDocuments"]{
+  margin-top: 16px;
+  @media (min-width:768px) {
+    margin-top: 24px;
+  }
+  @media (min-width:1200px) {
+    margin-top: 35px;
+  }
+
+  .owl-stage-outer{
+    overflow: initial;
+  }
+
+  @media (max-width: 1199px) {
+    .owl-item {
+      width: 284px !important;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .owl-item {
+      width: 236px !important;
+    }
+  }
+}
+
+.b-documents__slider__item{
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 313px;
+
+    @media (min-width:768px) {
+      height: 377px;
+    }
+    @media (min-width:1200px) {
+      height: 560px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[data-slider="OwlSpecialists"]{
+  @media (min-width: 1200px){
+    margin-bottom: 10px;
+  }
+}
+.b-specialists__slider__item{
+  width: 100%;
+  height: 316px;
+  @media (min-width:768px) {
+    height: 696px;
+  }
+  @media (min-width:1200px){
+    height: 527px;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.b-specialists__title{
+  @include H2;
+  font-weight: 700;
+  margin-bottom: 16px;
+  @media (min-width:768px) {
+    margin-bottom: 0;
+    @include H1;
+  }
+  @media (min-width:1200px){
+    @include H0;
+  }
+}
+.b-specialists__description{
+  margin-bottom: 40px;
+  @media (min-width:1200px){
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,121 @@
+.b-quiz__quiz{
+  display: flex;
+  flex-direction: column;
+
+  background-color: $white;
+  color: $black;
+
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  min-height: 478px;
+  padding: 0 16px 24px;
+  @media (min-width:768px){
+    padding: 0 24px 24px;
+    width: 70%;
+    min-height: 396px;
+  }
+  @media (min-width: 1200px){
+    min-height: 452px;
+    width: 100%;
+  }
+}
+.b-quiz__quiz__progress{
+  margin-bottom: 8px;
+  @media (min-width:768px){
+    margin-bottom: 24px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 -16px 8px -16px;
+    @media (min-width:768px){
+      margin: 0 -24px 8px -24px ;
+    }
+  }
+  li{
+    display: block;
+    flex: 1;
+    background-color: #E6E7E8;
+    height: 4px;
+
+    &.active{
+      background-color: $primary;
+    }
+  }
+  span,i{
+    color: $border_color;
+    @include B14;
+  }
+}
+.b-quiz__quiz__control{
+  padding-top: 15px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+
+  .btn_primary, .btn_white{
+    width: calc(50% - 9px);
+  }
+  .btn_primary, .btn_white span{
+    padding: 13px 20px;
+    @media (min-width:768px){
+      padding: 13px 80px;
+    }
+    @include H3;
+    font-weight: normal;
+  }
+}
+.b-quiz__quiz__items{
+}
+.b-quiz__quiz__item{
+  display: none;
+
+  &.active{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.b-quiz__quiz__item__title{
+  @include B18;
+  font-weight: 700;
+  margin-bottom: 12px;
+
+  @media (min-width:768px) {
+    @include H3;
+    margin-bottom: 16px;
+  }
+}
+
+[data-quiz-step="final"]{
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $primary;
+
+  align-items: center;
+  justify-content: center;
+
+  svg{
+    width: 148px;
+    height: 128px;
+  }
+}
+.b-quiz__quiz__item__final__title{
+  text-align: center;
+  margin-top: 166px;
+  @include H3;
+  font-weight: 500;
+  @media (min-width:768px){
+    @include H2;
+    margin-top: 44px;
+  }
+}

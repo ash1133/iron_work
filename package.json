@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp-sourcemaps": "^3.0.0",
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4"
+  }
+}

@@ -1,0 +1,19 @@
+@import "top";
+@import "center";
+@import "year";
+@import "plus";
+
+.b-header__wrapper{
+  background-image:url('../img/Rectangle1.jpg');
+  background-size: cover;
+  margin-top: 0;
+  padding-top: 32px;
+  color: $white;
+
+  [class*='col'],
+  [class*='col'] > *{
+    position: relative;
+    z-index: 2;
+  }
+}
+

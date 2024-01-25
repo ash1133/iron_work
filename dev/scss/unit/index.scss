@@ -1,0 +1,43 @@
+.b-get-unit__wrapper{}
+.b-get-unit__title{
+  margin-bottom: 8px;
+  @include H2;
+  font-weight: 700;
+  margin-top: 16px;
+
+  @media (min-width:768px) {
+    margin-top: 24px;
+    @include H1;
+  }
+  @media (min-width:1200px){
+    @include H0;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+}
+.b-get-unit__subtitle{
+  margin-bottom: 16px;
+  @include B1;
+  @media (min-width:768px) {
+    @include H2;
+  }
+  @media (min-width:1200px) {
+    margin-bottom: 28px;
+  }
+}
+.b-get-unit__text{
+  margin-bottom: 24px;
+  @media (min-width:1200px) {
+    margin-bottom: 32px;
+  }
+}
+.b-get-unit__action{
+  [class*='btn']{
+    width: 100%;
+    @media (min-width:1200px) {
+      width: auto;
+      padding-left: 59px;
+      padding-right: 59px;
+    }
+  }
+}

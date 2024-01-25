@@ -1,0 +1,51 @@
+@import "bnr";
+
+.b-catalog-wrapper{}
+.b-catalog__item{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 57px;
+}
+.b-catalog__item__img{
+  height: 318px;
+  padding: 0 0 16px 0;
+  @media (min-width:768px){
+    height: 342px;
+    padding: 0 0 12px 0;
+  }
+  @media (min-width:1200px) {
+    padding: 0 32px 26px;
+    height: 418px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.b-catalog__item__description{}
+.b-catalog__item__title{
+  margin-bottom: 4px;
+  @include H3;
+}
+.b-catalog__item__subtitle{
+  @include B2;
+  margin-bottom: 16px;
+}
+.b-catalog__item__actions{
+  margin: auto 0 0 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+  li + li {
+    margin-left: 4px;
+    @media (min-width:1200px) {
+      margin-left: 8px;
+    }
+  }
+
+}

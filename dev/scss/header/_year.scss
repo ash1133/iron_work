@@ -1,0 +1,57 @@
+.b-header__year__wrapper{
+  align-self: flex-start;
+  background-color: $white;
+  color: $black;
+  padding-top: 32px;
+
+  @media (min-width: 768px){
+    padding-top: 0;
+    color: $white;
+    background-color: transparent;
+  }
+}
+
+.b-header__year{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width:768px) {
+    padding-bottom: 9px;
+    margin-top: 10px;
+  }
+  @media (min-width: 1200px){
+    margin-top: 0;
+  }
+
+  &::before{
+    background-color: $primary;
+    height: 8px;
+    width: 60px;
+    clip-path: polygon(100% 0,100% 0%,calc(100% - 5px) 100%,0 100%,0 50%, 0 0);
+    display: inline-block;
+    margin-bottom: 11px;
+    @media (min-width:768px) {
+      content: '';
+    }
+  }
+}
+.b-header__year__subtitle{
+  @include B16;
+  font-weight: 500;
+  margin-bottom: -10px;
+  @media (min-width:768px) {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}
+.b-header__year__title{
+
+  @include H104;
+  @media (min-width:768px) {
+    font-weight: 700;
+    @include H2;
+  }
+  @media (min-width:1200px){
+    @include H0;
+  }
+}

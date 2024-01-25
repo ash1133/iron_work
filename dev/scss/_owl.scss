@@ -1,0 +1,61 @@
+[data-slider="OwlSpecialists"] {
+
+  .owl-nav{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    & > button{
+      width: 56px;
+      height: 49px;
+      display: block;
+      float: left;
+
+      &:hover svg *, &:focus svg *{
+        stroke: $primary;
+      }
+      &.owl-next{
+        float:right;
+      }
+
+      svg{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        * {
+          transition: stroke linear .2s;
+        }
+      }
+    }
+  }
+}
+
+.owl-dots{
+  width: calc(100% - (66px * 2));
+  position: relative;
+  transform: translateX(-50%);
+  left:50%;
+  text-align: center;
+  line-height: 100%;
+  padding-bottom: 16px;
+  padding-top: 20px;
+  @media (min-width:768px) {
+    padding-top: 43px;
+  }
+
+  .owl-dot + .owl-dot{
+    margin-left: 8px;
+  }
+
+  .owl-dot.active span{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none"><path d="M12 5.19615L9 10.3923H3L0 5.19615L3 0L9 2.62268e-07L12 5.19615Z" fill="%23FFCB05"/></svg>');
+  }
+  span{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none"><path d="M12 5.19615L9 10.3923H3L0 5.19615L3 0L9 2.62268e-07L12 5.19615Z" fill="%23E6E7E8"/></svg>');
+    background-repeat:no-repeat;
+    width: 12px;
+    height: 10px;
+    display: block;
+  }
+}

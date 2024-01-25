@@ -1,0 +1,50 @@
+
+.b-form__select__group{
+  display: flex;
+  flex-wrap: wrap;
+  margin:calc(9px / -2) calc(9px / -2) calc(16px + (9px / -2));
+
+
+  label{
+    flex: 0 0 50%;
+    @media (min-width:768px){
+      flex: 0 0 auto;
+    }
+    padding: calc(9px / 2);
+  }
+  span{
+    display: block;
+    padding: 12px 16px;
+    border: 1px solid $border_color;
+    @include B16;
+    line-height: 100%;
+    transition: background-color linear .2s, border-color linear .2s;
+  }
+  input{
+    display: none;
+
+    &:checked + span{
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+
+.b-form__input__text{
+  width: 100%;
+  input{
+    padding: 18px 12px;
+    width: 100%;
+    @include B2;
+    border:1px solid $border_color;
+
+    &::placeholder {
+      color: #747D89;
+    }
+
+    &:focus{
+      border:1px solid $border_color;
+    }
+
+  }
+}

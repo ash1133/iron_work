@@ -1,0 +1,28 @@
+.h0{
+  @include H0;
+  margin-bottom: 36px;
+}
+h1, .h1{
+  @include H1;
+}
+h2, .h2{
+  @include H2;
+}
+h3, .h3{
+  @include H3;
+}
+
+
+.b1{
+  @include B1;
+}
+.b2{
+  @include B2;
+}
+.b3{
+  @include B3;
+}
+
+p{
+  margin-bottom: 15px;
+}

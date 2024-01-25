@@ -1,0 +1,41 @@
+@import "quiz";
+
+.b-quiz__wrapper{
+  padding: 48px 0 40px;
+  background-color: $gray;
+  color: $white;
+
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="208" height="361" viewBox="0 0 208 361" fill="none"><path d="M208.229 0H208V361H0L208.229 0Z" fill="%23FFCB05"/></svg>');
+  @media (min-width:768px){
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="454" height="700" viewBox="0 0 454 700" fill="none"><path d="M404 0H454V700H0L404 0Z" fill="%23FFCB05"/></svg>');
+  }
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.b-quiz__title{
+  color: $white;
+  @include H3;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+  @media (min-width:768px){
+    margin-bottom: 19px;
+    text-align:center;
+    @include H40;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+}
+.b-quiz__img{
+  margin-left:-31px;
+
+  display: none;
+  @media (min-width:1200px){
+    display: block;
+  }
+  img{
+    mix-blend-mode: screen;
+  }
+}
+

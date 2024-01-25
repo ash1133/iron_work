@@ -1,0 +1,115 @@
+@mixin make-col($size: false, $columns: $columns) {
+  @if $size {
+    flex: 0 0 calc((100% / $columns) * $size);
+    max-width: calc((100% / $columns) * $size);
+
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+//cols
+@each $name, $point in $brake_points {
+  @if $name == 'sm' {
+    @for $i from 1 through $columns {
+      .col-#{$name}-#{$i} {
+        @include make-col($i);
+      }
+    }
+    .col-#{$name} {
+      @include make-col();
+    }
+    .col-#{$name}-auto {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+  } @else {
+    @media (min-width: #{$point}px){
+      @for $i from 1 through $columns {
+        .col-#{$name}-#{$i} {
+          @include make-col($i);
+        }
+      }
+      .col-#{$name} {
+        @include make-col();
+      }
+      .col-#{$name}-auto {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+//orders
+@each $name, $point in $brake_points {
+  @if $name == 'sm' {
+    @for $i from 1 through $orders_count {
+      .order-#{$name}-#{$i} {
+        order: $i!important;
+      }
+    }
+  } @else {
+    @for $i from 1 through $orders_count {
+      @media (min-width: #{$point}px) {
+        .order-#{$name}-#{$i} {
+          order: $i !important
+        }
+      }
+    }
+  }
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc($col_padding / -2);
+
+  & > [class*='col']{
+    order: 0;
+    padding-left: calc($col_padding / 2);
+    padding-right: calc($col_padding / 2);
+  }
+}
+
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: baseline;
+  align-items: flex-start;
+}
+.z0{
+  z-index: 0 !important;
+}
+
+.just-sb{
+  justify-content: space-between !important;
+}
+.just-sc{
+  justify-self: center !important;
+}
+.just-se{
+  justify-self: flex-end !important;
+}
+.align-ss{
+  align-self: flex-start !important;
+}
+.align-se{
+  align-self: flex-end !important;
+}
+.align-sc{
+  align-self: center !important;
+}
+.align-fe{
+  align-items: flex-end !important;
+}
+.align-ic{
+  align-items: center !important;
+}
+.align-ie{
+  align-items: flex-end !important;
+}
+.m0{
+  margin: 0 !important;
+}

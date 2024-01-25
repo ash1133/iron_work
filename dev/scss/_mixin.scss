@@ -1,0 +1,153 @@
+@mixin font_brutal {
+  font-family: "BrutalType";
+}
+@mixin font_inter {
+  font-family: 'Inter';
+}
+
+@mixin polygon_btn{
+  clip-path: polygon(calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,15px 100%,0 50%,15px 0);
+  //clip-path: polygon(95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%, 5% 0);
+}
+@mixin polygon_btn_primary{
+  clip-path: polygon(calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,15px 100%,0 50%,15px 0);
+  //clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0% 50%, 3% 0);
+}
+@mixin H104 {
+  font-size: 104px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin H0 {
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  font-size: 64px;
+  letter-spacing: 0.96px;
+}
+
+@mixin H28{
+  @include font_brutal;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+@mixin H24{
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 24px;
+}
+@mixin H40{
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 40px;
+}
+
+@mixin H1 {
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 48px;
+  letter-spacing: 0.96px;
+}
+
+@mixin H2 {
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 32px;
+}
+
+@mixin H3 {
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 24px;
+}
+
+@mixin B1 {
+  @include font_brutal;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+
+@mixin B2 {
+  @include font_brutal;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+}
+
+@mixin B14{
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 14px;
+}
+@mixin B18{
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+@mixin B20{
+  @include font_brutal;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin B16{
+  @include font_brutal;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+}
+
+@mixin B3 {
+  @include font_inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+}
+
+@mixin btn_small{
+  @include font_brutal;
+  @include B16;
+  font-weight: 500;
+}
+
+@mixin phone_underline {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  @media (min-width:1200px) {
+    width: calc(100% - 10px);
+    height: 4px;
+    top: calc(100% - 5px);
+  }
+}
